@@ -1,27 +1,98 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* ============================================================
+   Design Tokens — registered via @theme so Tailwind v4
+   generates utility classes (bg-primary, text-foreground, etc.)
+   ============================================================ */
+@theme {
+  /* Fonts */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+
+  /* Colors — Light Theme */
+  --color-background: hsl(220 20% 97%);        /* #F5F6FA */
+  --color-foreground: hsl(220 25% 12%);        /* #171C26 */
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(220 25% 12%);
+  --color-muted: hsl(220 14% 93%);             /* #ECEEF3 */
+  --color-muted-foreground: hsl(220 10% 46%);  /* #6B7280 */
+
+  --color-border: hsl(220 13% 87%);            /* #DCDFE6 */
+  --color-input: hsl(220 13% 87%);
+
+  --color-primary: hsl(215 80% 45%);           /* #1766B3 */
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary-light: hsl(215 75% 55%);     /* #2E80CC */
+  --color-primary-dark: hsl(215 85% 35%);      /* #0E4F8C */
+
+  --color-accent: hsl(38 92% 50%);             /* #F59E0B */
+  --color-accent-foreground: hsl(220 25% 12%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-ring: hsl(215 80% 45%);
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;    /* buttons: rounded-lg */
+  --radius-lg: 0.75rem;   /* cards: rounded-xl */
+  --radius-full: 9999px;  /* badges */
+}
+
+/* ============================================================
+   Raw CSS variables — referenced in arbitrary values & .section-dark
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark section variant — overrides surface colors for alternating sections */
+.section-dark {
+  --color-background: hsl(220 25% 10%);        /* #151922 */
+  --color-foreground: hsl(220 20% 95%);        /* #F0F2F7 */
+  --color-card: hsl(220 25% 14%);              /* #1C2233 */
+  --color-muted-foreground: hsl(220 10% 60%);
+  --color-border: hsl(220 20% 20%);
 }
 
+/* ============================================================
+   Base styles
+   ============================================================ */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(220 20% 97%);
+  color: hsl(220 25% 12%);
+  font-family: var(--font-dm-sans, "DM Sans", sans-serif);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* ============================================================
+   Typography helpers
+   ============================================================ */
+.font-display {
+  font-family: var(--font-montserrat, "Montserrat", sans-serif);
+}
+
+/* Section micro-label: e.g. "OUR SERVICES" */
+.micro-label {
+  font-family: var(--font-montserrat, "Montserrat", sans-serif);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(215 80% 45%);
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
