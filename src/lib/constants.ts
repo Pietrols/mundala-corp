@@ -56,16 +56,15 @@ export interface NavLink {
 /** Lucide icon name — extend this union as new icons are added */
 export type LucideIconName =
   | "Shield"
-  | "CheckCircle"
+  | "Award"
+  | "Handshake"
   | "Heart"
-  | "Star"
   | "Zap"
   | "Fuel"
   | "Mountain"
   | "Truck"
   | "Microscope"
   | "BadgeCheck"
-  | "Award"
   | "TrendingDown"
   | "Clock"
   | "Settings"
@@ -163,19 +162,19 @@ export const CORE_VALUES: CoreValue[] = [
   },
   {
     id: "reliability",
-    icon: "CheckCircle",
+    icon: "Award",
     title: "Reliability",
     description: "Consistent delivery on every commitment.",
   },
   {
     id: "respect",
-    icon: "Heart",
+    icon: "Handshake",
     title: "Respect",
     description: "Valuing every client and partner relationship.",
   },
   {
     id: "loyalty",
-    icon: "Star",
+    icon: "Heart",
     title: "Loyalty",
     description: "Long-term partnerships built on trust.",
   },

@@ -1,44 +1,31 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  Shield,
-  CheckCircle,
-  Heart,
-  Star,
-  Zap,
-  Building2,
-  type LucideIcon,
-} from "lucide-react";
-import ScrollReveal, {
-  staggerChildVariants,
-} from "@/components/ui/ScrollReveal";
-import { COMPANY_INFO, CORE_VALUES } from "@/lib/constants";
+import { Shield, Award, Handshake, Heart, Zap, type LucideIcon } from "lucide-react";
+import ScrollReveal, { staggerChildVariants } from "@/components/ui/ScrollReveal";
+import { CORE_VALUES } from "@/lib/constants";
 import type { LucideIconName } from "@/lib/constants";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Icon map — keyed by the LucideIconName values used in CORE_VALUES
+// Icon map
 // ─────────────────────────────────────────────────────────────────────────────
 
 const ICONS: Record<LucideIconName, LucideIcon> = {
   Shield,
-  CheckCircle,
+  Award,
+  Handshake,
   Heart,
-  Star,
   Zap,
-  // The remaining names in the union are used by other sections; stub them
-  // here so TypeScript's exhaustive-check on Record<LucideIconName, …> passes.
-  Fuel: Building2,
-  Mountain: Building2,
-  Truck: Building2,
-  Microscope: Building2,
-  BadgeCheck: Building2,
-  Award: Building2,
-  TrendingDown: Building2,
-  Clock: Building2,
-  Settings: Building2,
-  Headphones: Building2,
+  // Stubs for icons used in other sections
+  Fuel: Shield,
+  Mountain: Shield,
+  Truck: Shield,
+  Microscope: Shield,
+  BadgeCheck: Shield,
+  TrendingDown: Shield,
+  Clock: Shield,
+  Settings: Shield,
+  Headphones: Shield,
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -53,9 +40,9 @@ export default function About() {
       className="bg-background py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* ── Two-column: content left / image right ─────────────────────── */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Content — slides in from the left */}
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+
+          {/* ── Left column: text ────────────────────────────────────────── */}
           <ScrollReveal direction="left" duration={0.7}>
             <p className="micro-label mb-3">About Us</p>
 
@@ -78,9 +65,9 @@ export default function About() {
                 fuels and mining consumables to heavy machinery and cutting-edge
                 XRF mineral analytical equipment. As the exclusive African
                 partner for Baltic Scientific Instruments (BSI), we bring
-                world-class technology to the continent&apos;s mining operations
-                — enabling real-time ore grade assessment that saves millions in
-                operational costs.
+                world-class technology to the continent&apos;s mining
+                operations — enabling real-time ore grade assessment that saves
+                millions in operational costs.
               </p>
               <p>
                 Regulatory compliance and quality assurance sit at the heart of
@@ -92,111 +79,70 @@ export default function About() {
                 buyers across Africa.
               </p>
             </div>
-
-            {/* Founding callout */}
-            <div className="mt-8 inline-flex items-center gap-3 rounded-lg border border-border bg-muted px-5 py-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                <Building2 size={17} className="text-primary" />
-              </div>
-              <div>
-                <p className="font-display text-sm font-semibold text-foreground">
-                  {COMPANY_INFO.name}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Established 21 September 2021 · Lusaka &amp; Kitwe, Zambia
-                </p>
-              </div>
-            </div>
           </ScrollReveal>
 
-          {/* Image — slides in from the right */}
+          {/* ── Right column: Vision + Mission cards, then core values ───── */}
           <ScrollReveal direction="right" duration={0.7} delay={0.1}>
-            <div className="relative aspect-6/5 overflow-hidden rounded-2xl shadow-xl">
-              {/*
-                Branded placeholder shown until /public/images/about-company.webp
-                is placed. The real photo will render on top and cover this entirely.
-              */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 flex flex-col items-center justify-center gap-3
-                           bg-linear-to-br from-primary/15 via-primary/8 to-primary-dark/20"
-              >
-                <Building2
-                  size={52}
-                  className="text-primary/25"
-                  strokeWidth={1.25}
-                />
-                <p className="font-display text-sm font-medium text-primary/35">
-                  Company photo coming soon
-                </p>
-              </div>
-
-              <Image
-                src="/images/about-company.webp"
-                alt="Mundala Corporation industrial operations in Zambia"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-
-              {/* Subtle bottom gradient to anchor the image visually */}
-              <div
-                aria-hidden="true"
-                className="absolute inset-x-0 bottom-0 h-1/4
-                           bg-linear-to-t from-black/30 to-transparent"
-              />
+            {/* Vision card */}
+            <div className="rounded-xl border border-border bg-white/60 p-6 shadow-sm backdrop-blur-sm">
+              <p className="micro-label mb-2">Our Vision</p>
+              <p className="text-muted-foreground">
+                To be Africa&apos;s most trusted industrial supply partner —
+                connecting Zambia&apos;s industries with world-class products
+                and technology that drive sustainable growth across the
+                continent.
+              </p>
             </div>
+
+            {/* Mission card */}
+            <div className="mt-4 rounded-xl border border-border bg-white/60 p-6 shadow-sm backdrop-blur-sm">
+              <p className="micro-label mb-2">Our Mission</p>
+              <p className="text-muted-foreground">
+                To deliver reliable, compliant, and competitively priced
+                industrial solutions that empower Zambia&apos;s mining,
+                petroleum, and manufacturing sectors — backed by integrity,
+                expert knowledge, and a genuine commitment to client success.
+              </p>
+            </div>
+
+            {/* Core values — 2-column icon + label grid */}
+            <ScrollReveal
+              stagger
+              staggerDelay={0.08}
+              delay={0.05}
+              margin="-60px"
+              className="mt-6 grid grid-cols-2 gap-3 sm:gap-4"
+            >
+              {CORE_VALUES.map((value) => {
+                const Icon = ICONS[value.icon];
+                return (
+                  <motion.div
+                    key={value.id}
+                    variants={staggerChildVariants}
+                    className="group flex items-center gap-3 rounded-lg border border-border
+                               bg-card px-4 py-3 shadow-sm transition-all duration-200
+                               hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-md"
+                  >
+                    <div
+                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full
+                                 bg-primary/8 transition-colors duration-200 group-hover:bg-primary/14"
+                    >
+                      <Icon
+                        size={15}
+                        className="text-primary transition-transform duration-200 group-hover:scale-110"
+                        strokeWidth={1.75}
+                      />
+                    </div>
+                    <span className="font-display text-sm font-semibold text-foreground">
+                      {value.title}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </ScrollReveal>
           </ScrollReveal>
+
         </div>
-
-        {/* ── Core values ────────────────────────────────────────────────── */}
-        {/*
-          ScrollReveal in stagger mode: triggers once the grid enters the viewport,
-          then cascades the "visible" state to each motion.div child with a
-          staggerChildren delay of 0.1 s between them.
-        */}
-        <ScrollReveal
-          stagger
-          staggerDelay={0.09}
-          delay={0.05}
-          margin="-60px"
-          className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-20 md:grid-cols-5 md:gap-5"
-        >
-          {CORE_VALUES.map((value) => {
-            const Icon = ICONS[value.icon];
-            return (
-              <motion.div
-                key={value.id}
-                variants={staggerChildVariants}
-                className="group flex flex-col items-center rounded-xl border border-border
-                           bg-card p-5 text-center shadow-sm
-                           transition-all duration-200
-                           hover:-translate-y-1 hover:shadow-md hover:border-primary/20"
-              >
-                {/* Icon container */}
-                <div
-                  className="mb-3 flex h-11 w-11 items-center justify-center rounded-full
-                             bg-primary/8 transition-colors duration-200
-                             group-hover:bg-primary/14"
-                >
-                  <Icon
-                    size={20}
-                    className="text-primary transition-transform duration-200 group-hover:scale-110"
-                    strokeWidth={1.75}
-                  />
-                </div>
-
-                <h3 className="mb-1.5 font-display text-sm font-semibold text-foreground">
-                  {value.title}
-                </h3>
-
-                <p className="text-xs leading-relaxed text-muted-foreground">
-                  {value.description}
-                </p>
-              </motion.div>
-            );
-          })}
-        </ScrollReveal>
       </div>
     </section>
   );
