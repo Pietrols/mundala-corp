@@ -56,6 +56,7 @@ export interface NavLink {
 /** Lucide icon name — extend this union as new icons are added */
 export type LucideIconName =
   | "Shield"
+  | "ShieldCheck"
   | "Award"
   | "Handshake"
   | "Heart"
