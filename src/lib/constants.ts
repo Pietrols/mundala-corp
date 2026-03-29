@@ -61,7 +61,7 @@ export type LucideIconName =
   | "Heart"
   | "Zap"
   | "Fuel"
-  | "Mountain"
+  | "Pickaxe"
   | "Truck"
   | "Microscope"
   | "BadgeCheck"
@@ -207,7 +207,7 @@ export const SERVICES: Service[] = [
   {
     id: "mining",
     title: "Mining Products",
-    icon: "Mountain",
+    icon: "Pickaxe",
     description:
       "Full range of mining consumables and equipment through an established supplier network with competitive pricing.",
     products: [

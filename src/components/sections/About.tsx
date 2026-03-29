@@ -18,7 +18,7 @@ const ICONS: Record<LucideIconName, LucideIcon> = {
   Zap,
   // Stubs for icons used in other sections
   Fuel: Shield,
-  Mountain: Shield,
+  Pickaxe: Shield,
   Truck: Shield,
   Microscope: Shield,
   BadgeCheck: Shield,
