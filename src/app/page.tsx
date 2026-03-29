@@ -1,36 +1,39 @@
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
+import BSIPartnership from "@/components/sections/BSIPartnership";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      <Hero />
+    <>
+      <Navbar />
 
-      <About />
+      <main className="flex flex-col">
+        {/* Step 4: Hero Section */}
+        <Hero />
 
-      <section
-        id="services"
-        className="flex min-h-[60vh] flex-col items-center justify-center gap-8 bg-muted p-8"
-      >
-        <p className="micro-label">Services</p>
-        <p className="text-muted-foreground">Coming in Step 5.</p>
-      </section>
+        {/* Step 5: About Section */}
+        <About />
 
-      <section
-        id="partnership"
-        className="flex min-h-[60vh] flex-col items-center justify-center gap-8 p-8"
-      >
-        <p className="micro-label">Partnership</p>
-        <p className="text-muted-foreground">Coming in Step 6.</p>
-      </section>
+        {/* Step 5 — Services (Card-based overview) */}
+        <Services />
 
-      <section
-        id="contact"
-        className="flex min-h-[60vh] flex-col items-center justify-center gap-8 bg-muted p-8"
-      >
-        <p className="micro-label">Contact</p>
-        <p className="text-muted-foreground">Coming in Step 8.</p>
-      </section>
-    </main>
+        {/* Step 6 — BSI Partnership (Feature spotlight) */}
+        <BSIPartnership />
+
+        {/* Step 7 — Why Choose Us (Value proposition grid) */}
+        <WhyChooseUs />
+
+        {/* Step 8 — Contact (Form and Office info) */}
+        <Contact />
+      </main>
+
+      {/* Footer implementation */}
+      <Footer />
+    </>
   );
 }

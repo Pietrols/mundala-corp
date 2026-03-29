@@ -100,11 +100,12 @@ export default function Navbar() {
             >
               <span
                 className={[
-                  "font-display text-xl font-bold tracking-tight transition-colors duration-300",
+                  "font-display font-bold tracking-tight transition-colors duration-300",
                   scrolled ? "text-primary" : "text-white",
                 ].join(" ")}
               >
-                MUNDALA
+                <span className="text-2xl">m</span>
+                <span className="text-xl">undala</span>
               </span>
               <span
                 className={[
@@ -112,7 +113,8 @@ export default function Navbar() {
                   scrolled ? "text-muted-foreground" : "text-white/70",
                 ].join(" ")}
               >
-                {" "}Corp
+                {" "}
+                Corp
               </span>
             </a>
 
@@ -187,7 +189,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-[60] bg-foreground/50 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-60 bg-foreground/50 backdrop-blur-sm lg:hidden"
               onClick={closeMobile}
               aria-hidden="true"
             />
@@ -207,7 +209,7 @@ export default function Navbar() {
                 duration: 0.3,
                 ease: [0.32, 0.72, 0, 1],
               }}
-              className="fixed inset-y-0 right-0 z-[70] flex w-80 max-w-[calc(100vw-3rem)] flex-col bg-white shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-70 flex w-80 max-w-[calc(100vw-3rem)] flex-col bg-white shadow-2xl lg:hidden"
             >
               {/* Panel header */}
               <div className="flex items-center justify-between border-b border-border px-6 py-5">
@@ -224,7 +226,8 @@ export default function Navbar() {
                     MUNDALA
                   </span>
                   <span className="font-display text-lg font-medium text-muted-foreground">
-                    {" "}Corp
+                    {" "}
+                    Corp
                   </span>
                 </a>
 

@@ -11,7 +11,9 @@ import {
   Building2,
   type LucideIcon,
 } from "lucide-react";
-import ScrollReveal, { staggerChildVariants } from "@/components/ui/ScrollReveal";
+import ScrollReveal, {
+  staggerChildVariants,
+} from "@/components/ui/ScrollReveal";
 import { COMPANY_INFO, CORE_VALUES } from "@/lib/constants";
 import type { LucideIconName } from "@/lib/constants";
 
@@ -27,16 +29,16 @@ const ICONS: Record<LucideIconName, LucideIcon> = {
   Zap,
   // The remaining names in the union are used by other sections; stub them
   // here so TypeScript's exhaustive-check on Record<LucideIconName, …> passes.
-  Fuel:        Building2,
-  Mountain:    Building2,
-  Truck:       Building2,
-  Microscope:  Building2,
-  BadgeCheck:  Building2,
-  Award:       Building2,
-  TrendingDown:Building2,
-  Clock:       Building2,
-  Settings:    Building2,
-  Headphones:  Building2,
+  Fuel: Building2,
+  Mountain: Building2,
+  Truck: Building2,
+  Microscope: Building2,
+  BadgeCheck: Building2,
+  Award: Building2,
+  TrendingDown: Building2,
+  Clock: Building2,
+  Settings: Building2,
+  Headphones: Building2,
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -51,10 +53,8 @@ export default function About() {
       className="bg-background py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* ── Two-column: content left / image right ─────────────────────── */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-
           {/* Content — slides in from the left */}
           <ScrollReveal direction="left" duration={0.7}>
             <p className="micro-label mb-3">About Us</p>
@@ -66,20 +66,21 @@ export default function About() {
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Mundala Corporation Limited was established in September 2021 with a
-                clear mission: to be the most reliable industrial supply partner for
-                Zambia&apos;s growing economy. From our offices in Lusaka and Kitwe,
-                we serve the mining, petroleum, and analytical equipment sectors —
-                industries that form the backbone of regional development.
+                Mundala Corporation Limited was established in September 2021
+                with a clear mission: to be the most reliable industrial supply
+                partner for Zambia&apos;s growing economy. From our offices in
+                Lusaka and Kitwe, we serve the mining, petroleum, and analytical
+                equipment sectors — industries that form the backbone of
+                regional development.
               </p>
               <p>
-                We supply a comprehensive range of products, from petroleum fuels
-                and mining consumables to heavy machinery and cutting-edge XRF
-                mineral analytical equipment. As the exclusive African partner for
-                Baltic Scientific Instruments (BSI), we bring world-class
-                technology to the continent&apos;s mining operations — enabling
-                real-time ore grade assessment that saves millions in operational
-                costs.
+                We supply a comprehensive range of products, from petroleum
+                fuels and mining consumables to heavy machinery and cutting-edge
+                XRF mineral analytical equipment. As the exclusive African
+                partner for Baltic Scientific Instruments (BSI), we bring
+                world-class technology to the continent&apos;s mining operations
+                — enabling real-time ore grade assessment that saves millions in
+                operational costs.
               </p>
               <p>
                 Regulatory compliance and quality assurance sit at the heart of
@@ -110,7 +111,7 @@ export default function About() {
 
           {/* Image — slides in from the right */}
           <ScrollReveal direction="right" duration={0.7} delay={0.1}>
-            <div className="relative aspect-[6/5] overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative aspect-6/5 overflow-hidden rounded-2xl shadow-xl">
               {/*
                 Branded placeholder shown until /public/images/about-company.webp
                 is placed. The real photo will render on top and cover this entirely.
@@ -118,9 +119,13 @@ export default function About() {
               <div
                 aria-hidden="true"
                 className="absolute inset-0 flex flex-col items-center justify-center gap-3
-                           bg-gradient-to-br from-primary/15 via-primary/8 to-primary-dark/20"
+                           bg-linear-to-br from-primary/15 via-primary/8 to-primary-dark/20"
               >
-                <Building2 size={52} className="text-primary/25" strokeWidth={1.25} />
+                <Building2
+                  size={52}
+                  className="text-primary/25"
+                  strokeWidth={1.25}
+                />
                 <p className="font-display text-sm font-medium text-primary/35">
                   Company photo coming soon
                 </p>
@@ -138,7 +143,7 @@ export default function About() {
               <div
                 aria-hidden="true"
                 className="absolute inset-x-0 bottom-0 h-1/4
-                           bg-gradient-to-t from-black/30 to-transparent"
+                           bg-linear-to-t from-black/30 to-transparent"
               />
             </div>
           </ScrollReveal>
@@ -192,7 +197,6 @@ export default function About() {
             );
           })}
         </ScrollReveal>
-
       </div>
     </section>
   );

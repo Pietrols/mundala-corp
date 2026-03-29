@@ -98,10 +98,10 @@ The palette balances Mundala's corporate blue identity with warm neutral tones. 
   --input: 220 13% 87%;
 
   /* Primary — Mundala Corporate Blue */
-  --primary: 215 80% 45%;           /* #1766B3 — strong, trustworthy blue */
+  --primary: 215 80% 30%;           /* Deep corporate navy */
   --primary-foreground: 0 0% 100%;  /* White text on blue */
-  --primary-light: 215 75% 55%;     /* #2E80CC — hover states */
-  --primary-dark: 215 85% 35%;      /* #0E4F8C — active states */
+  --primary-light: 215 75% 40%;     /* Hover states */
+  --primary-dark: 215 85% 22%;      /* Active/pressed states */
 
   /* Secondary — Warm Accent */
   --accent: 38 92% 50%;             /* #F59E0B — amber/gold for CTAs */
@@ -109,7 +109,7 @@ The palette balances Mundala's corporate blue identity with warm neutral tones. 
 
   /* Semantic */
   --destructive: 0 84% 60%;
-  --ring: 215 80% 45%;              /* Focus ring matches primary */
+  --ring: 215 80% 30%;              /* Focus ring matches primary */
 
   /* Radius */
   --radius: 0.5rem;

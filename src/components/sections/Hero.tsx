@@ -129,7 +129,6 @@ export default function Hero() {
       */}
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 pt-20 pb-4 text-center sm:px-6 sm:pt-24 lg:px-8">
         <div className="w-full max-w-4xl">
-
           {/* 1 ── Micro-label */}
           <motion.p
             custom={0}
@@ -150,14 +149,13 @@ export default function Hero() {
             className="mb-6 font-display font-extrabold leading-[1.08] tracking-tight text-white
                        text-[2.5rem] sm:text-5xl lg:text-[4.5rem]"
           >
-            Powering Africa&apos;s{" "}
-            <br className="hidden sm:block" />
+            Powering Africa&apos;s <br className="hidden sm:block" />
             <span className="text-primary-light">Industries</span>
           </motion.h1>
 
           {/* 3 ── Subheading */}
           <motion.p
-            custom={0.30}
+            custom={0.3}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
@@ -213,7 +211,7 @@ export default function Hero() {
 
         {/* Scroll indicator — appears last, bounces indefinitely */}
         <motion.div
-          custom={0.60}
+          custom={0.6}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
