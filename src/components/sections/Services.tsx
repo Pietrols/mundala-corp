@@ -43,7 +43,7 @@ export default function Services() {
     <section
       id="services"
       aria-label="Our services"
-      className="section-dark py-24 md:py-32"
+      className="bg-[hsl(220_25%_10%)] py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* ── Header ─────────────────────────────────────────────────────── */}
@@ -63,7 +63,7 @@ export default function Services() {
             return (
               <ScrollReveal key={service.id} delay={i * 0.1}>
                 <div
-                  className="group flex h-[520px] flex-col overflow-hidden rounded-2xl
+                  className="group flex h-130 flex-col overflow-hidden rounded-2xl
                              border border-white/10 bg-slate-900 transition-all duration-200
                              hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
                 >
