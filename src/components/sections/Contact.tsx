@@ -47,7 +47,7 @@ function OfficeCard({ office }: { office: (typeof OFFICES)[number] }) {
 const inputCls =
   "w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white " +
   "placeholder:text-white/30 backdrop-blur-sm transition-colors duration-150 " +
-  "focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40";
+  "focus:border-primary/60 focus:outline-none focus:ring-1 focus:ring-primary/40";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Component
@@ -172,8 +172,8 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full rounded-lg bg-primary px-6 py-3 font-display font-semibold
-                           text-white shadow-md transition-all duration-200
-                           hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg
+                           text-primary-foreground shadow-md transition-all duration-200
+                           hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)]
                            active:translate-y-0 active:shadow-md"
               >
                 Send Message

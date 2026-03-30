@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer
       aria-label="Site footer"
-      className="bg-[hsl(220_25%_7%)]"
+      className="bg-[hsl(220_20%_5%)]"
     >
       {/* ── Main grid ──────────────────────────────────────────────────── */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export default function Footer() {
               <span className="font-display text-xl font-bold text-white">
                 mundala
               </span>
-              <span className="font-display text-xl font-medium text-white/50">
+              <span className="font-display text-xl font-medium text-white/60">
                 {" "}Corp
               </span>
             </a>
@@ -39,7 +39,7 @@ export default function Footer() {
                 href={CONTACT.social.linkedin || "#"}
                 aria-label="LinkedIn"
                 className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10
-                           text-white/40 transition-colors duration-150 hover:border-white/20 hover:text-white/70"
+                           text-white/40 transition-colors duration-150 hover:border-white/30 hover:text-white"
               >
                 {/* LinkedIn mark */}
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
@@ -52,12 +52,12 @@ export default function Footer() {
                 href={CONTACT.social.youtube || "#"}
                 aria-label="YouTube"
                 className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10
-                           text-white/40 transition-colors duration-150 hover:border-white/20 hover:text-white/70"
+                           text-white/40 transition-colors duration-150 hover:border-white/30 hover:text-white"
               >
                 {/* YouTube play mark */}
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
                   <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
-                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="hsl(220 25% 7%)" />
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="hsl(220 20% 5%)" />
                 </svg>
               </a>
             </div>

@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
     <section
       id="why-us"
       aria-label="Why choose Mundala"
-      className="bg-background py-20 md:py-28"
+      className="bg-background section-light py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 

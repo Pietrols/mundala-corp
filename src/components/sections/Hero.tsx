@@ -135,7 +135,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mb-5 font-display text-xs font-semibold uppercase tracking-[0.18em] text-primary-light sm:text-sm"
+            className="mb-5 font-display text-xs font-semibold uppercase tracking-[0.18em] text-white/80 sm:text-sm"
           >
             {COMPANY_INFO.tagline}
           </motion.p>
@@ -150,7 +150,7 @@ export default function Hero() {
                        text-[2.5rem] sm:text-5xl lg:text-[4.5rem]"
           >
             Powering Africa&apos;s <br className="hidden sm:block" />
-            <span className="text-primary-light">Industries</span>
+            <span className="text-white">Industries</span>
           </motion.h1>
 
           {/* 3 ── Subheading */}
@@ -181,10 +181,10 @@ export default function Hero() {
                 scrollTo("#services");
               }}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-3.5
-                         font-display font-semibold text-white
+                         font-display font-semibold text-primary-foreground
                          shadow-lg shadow-primary/30
                          transition-all duration-200
-                         hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/25
+                         hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)]
                          active:translate-y-0 active:shadow-md"
             >
               Explore Our Services
@@ -198,10 +198,10 @@ export default function Hero() {
                 e.preventDefault();
                 scrollTo("#contact");
               }}
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-white/55 px-7 py-3.5
+              className="inline-flex items-center gap-2 rounded-lg border-2 border-white/50 px-7 py-3.5
                          font-display font-semibold text-white
                          transition-all duration-200
-                         hover:border-white hover:bg-white/10 hover:-translate-y-0.5
+                         hover:border-white hover:bg-white hover:text-primary hover:-translate-y-0.5
                          active:translate-y-0"
             >
               Contact Us
@@ -240,7 +240,7 @@ export default function Hero() {
         animate="visible"
         variants={statsBarVariant}
         className="relative z-10 w-full border-t border-white/10
-                   bg-[hsl(220_25%_8%/0.80)] backdrop-blur-md"
+                   bg-white/5 backdrop-blur-md"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <dl className="grid grid-cols-2 lg:grid-cols-4">

@@ -49,7 +49,8 @@ export default function Services() {
         {/* ── Header ─────────────────────────────────────────────────────── */}
         <ScrollReveal className="mb-16 text-center">
           <p className="micro-label mb-3">What We Offer</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight text-primary-light md:text-5xl">
+          <div className="accent-line w-12 mx-auto mt-3 mb-6" />
+          <h2 className="font-display text-4xl font-bold tracking-tight text-white md:text-5xl">
             Comprehensive Industrial Solutions
           </h2>
         </ScrollReveal>
@@ -64,8 +65,8 @@ export default function Services() {
               <ScrollReveal key={service.id} delay={i * 0.1}>
                 <div
                   className="group flex h-130 flex-col overflow-hidden rounded-2xl
-                             border border-white/10 bg-slate-900 transition-all duration-200
-                             hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
+                             border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-200
+                             hover:border-white/30 hover:shadow-2xl hover:shadow-black/30 hover:-translate-y-1"
                 >
                   {/* ── Image — top 70% ────────────────────────────────── */}
                   <div className="relative h-[70%] w-full shrink-0">
@@ -89,9 +90,9 @@ export default function Services() {
                     <div className="flex items-center gap-3">
                       {/* Icon */}
                       <div
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg
-                                   bg-primary/20 text-primary-light transition-colors duration-200
-                                   group-hover:bg-primary/30"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl
+                                   bg-white/10 text-white transition-colors duration-200
+                                   group-hover:bg-white/15"
                       >
                         {Icon && <Icon size={20} strokeWidth={1.75} />}
                       </div>

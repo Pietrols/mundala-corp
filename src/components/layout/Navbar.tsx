@@ -64,7 +64,7 @@ export default function Navbar() {
 
   // ── Derived style helpers ─────────────────────────────────────
   const linkClass = scrolled
-    ? "text-foreground hover:text-primary"
+    ? "text-foreground hover:text-white"
     : "text-white/90 hover:text-white";
 
   const iconClass = scrolled
@@ -79,7 +79,7 @@ export default function Navbar() {
         className={[
           "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out",
           scrolled
-            ? "bg-white/95 backdrop-blur-sm border-b border-border shadow-md"
+            ? "bg-[hsl(220_18%_8%/0.90)] backdrop-blur-xl border-b border-border shadow-md"
             : "bg-transparent",
         ].join(" ")}
       >
@@ -101,18 +101,13 @@ export default function Navbar() {
               <span
                 className={[
                   "font-display font-bold tracking-tight transition-colors duration-300",
-                  scrolled ? "text-primary" : "text-white",
+                  scrolled ? "text-foreground" : "text-white",
                 ].join(" ")}
               >
                 <span className="text-2xl">m</span>
                 <span className="text-xl">undala</span>
               </span>
-              <span
-                className={[
-                  "font-display text-xl font-medium transition-colors duration-300",
-                  scrolled ? "text-muted-foreground" : "text-white/70",
-                ].join(" ")}
-              >
+              <span className="font-display text-xl font-medium text-white/70 transition-colors duration-300">
                 {" "}
                 Corp
               </span>
@@ -148,7 +143,7 @@ export default function Navbar() {
                   e.preventDefault();
                   scrollTo("#contact");
                 }}
-                className="hidden lg:inline-flex items-center rounded-lg bg-primary px-5 py-2.5 font-display font-semibold text-sm text-white shadow-sm transition-all duration-200 hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-sm"
+                className="hidden lg:inline-flex items-center rounded-lg bg-primary px-5 py-2.5 font-display font-semibold text-sm text-primary-foreground shadow-sm transition-all duration-200 hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)] active:translate-y-0 active:shadow-sm"
               >
                 Get In Touch
               </a>
@@ -189,7 +184,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-60 bg-foreground/50 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-60 bg-black/60 backdrop-blur-sm lg:hidden"
               onClick={closeMobile}
               aria-hidden="true"
             />
@@ -209,7 +204,7 @@ export default function Navbar() {
                 duration: 0.3,
                 ease: [0.32, 0.72, 0, 1],
               }}
-              className="fixed inset-y-0 right-0 z-70 flex w-80 max-w-[calc(100vw-3rem)] flex-col bg-white shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-70 flex w-80 max-w-[calc(100vw-3rem)] flex-col bg-card shadow-2xl lg:hidden"
             >
               {/* Panel header */}
               <div className="flex items-center justify-between border-b border-border px-6 py-5">
@@ -222,10 +217,10 @@ export default function Navbar() {
                   aria-label="Mundala Corporation"
                   className="select-none"
                 >
-                  <span className="font-display text-lg font-bold text-primary">
+                  <span className="font-display text-lg font-bold text-foreground">
                     MUNDALA
                   </span>
-                  <span className="font-display text-lg font-medium text-muted-foreground">
+                  <span className="font-display text-lg font-medium text-foreground/70">
                     {" "}
                     Corp
                   </span>
@@ -259,7 +254,7 @@ export default function Navbar() {
                       duration: 0.22,
                       ease: "easeOut",
                     }}
-                    className="flex items-center rounded-lg px-4 py-3.5 font-display font-medium text-foreground transition-colors duration-150 hover:bg-muted hover:text-primary"
+                    className="flex items-center rounded-lg px-4 py-3.5 font-display font-medium text-foreground transition-colors duration-150 hover:bg-muted hover:text-foreground"
                   >
                     {link.label}
                   </motion.a>
@@ -279,7 +274,7 @@ export default function Navbar() {
                     e.preventDefault();
                     scrollTo("#contact");
                   }}
-                  className="flex w-full items-center justify-center rounded-lg bg-primary py-3.5 font-display font-semibold text-white transition-colors duration-200 hover:bg-primary-light"
+                  className="flex w-full items-center justify-center rounded-lg bg-primary py-3.5 font-display font-semibold text-primary-foreground transition-colors duration-200 hover:bg-primary-light"
                 >
                   Get In Touch
                 </a>

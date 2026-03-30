@@ -34,9 +34,9 @@ export default function BSIPartnership() {
           <ScrollReveal direction="left" duration={0.7}>
             <p className="micro-label mb-3">Strategic Partnership</p>
 
-            <h2 className="mb-6 font-display text-3xl font-bold leading-tight text-primary-dark sm:text-4xl">
+            <h2 className="mb-6 font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
               Transforming Mineral Analysis{" "}
-              <span className="text-primary">in Africa</span>
+              <span className="text-white">in Africa</span>
             </h2>
 
             <p className="mb-8 leading-relaxed text-muted-foreground">
@@ -73,8 +73,8 @@ export default function BSIPartnership() {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-display
-                         font-semibold text-white shadow-md transition-all duration-200
-                         hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg
+                         font-semibold text-primary-foreground shadow-md transition-all duration-200
+                         hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)]
                          active:translate-y-0 active:shadow-md"
             >
               Request Information
@@ -83,7 +83,7 @@ export default function BSIPartnership() {
 
           {/* ── Right: XRF image ───────────────────────────────────────── */}
           <ScrollReveal direction="right" duration={0.7} delay={0.15}>
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-white/20">
               {/* Branded placeholder shown until image loads / if missing */}
               <div
                 aria-hidden="true"

@@ -1,8 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Award, Handshake, Heart, Zap, type LucideIcon } from "lucide-react";
-import ScrollReveal, { staggerChildVariants } from "@/components/ui/ScrollReveal";
+import {
+  Shield,
+  Award,
+  Handshake,
+  Heart,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import ScrollReveal, {
+  staggerChildVariants,
+} from "@/components/ui/ScrollReveal";
 import { CORE_VALUES } from "@/lib/constants";
 import type { LucideIconName } from "@/lib/constants";
 
@@ -21,6 +30,7 @@ const ICONS: Record<LucideIconName, LucideIcon> = {
   Pickaxe: Shield,
   Truck: Shield,
   Microscope: Shield,
+  ShieldCheck: Shield,
   BadgeCheck: Shield,
   TrendingDown: Shield,
   Clock: Shield,
@@ -37,14 +47,14 @@ export default function About() {
     <section
       id="about"
       aria-label="About Mundala Corporation"
-      className="bg-background py-20 md:py-28"
+      className="bg-background section-light py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
-
           {/* ── Left column: text ────────────────────────────────────────── */}
           <ScrollReveal direction="left" duration={0.7}>
             <p className="micro-label mb-3">About Us</p>
+            <div className="accent-line w-12 mb-6" />
 
             <h2 className="mb-6 font-display text-3xl font-bold leading-tight text-foreground sm:text-4xl">
               Building Trust Across{" "}
@@ -65,9 +75,9 @@ export default function About() {
                 fuels and mining consumables to heavy machinery and cutting-edge
                 XRF mineral analytical equipment. As the exclusive African
                 partner for Baltic Scientific Instruments (BSI), we bring
-                world-class technology to the continent&apos;s mining
-                operations — enabling real-time ore grade assessment that saves
-                millions in operational costs.
+                world-class technology to the continent&apos;s mining operations
+                — enabling real-time ore grade assessment that saves millions in
+                operational costs.
               </p>
               <p>
                 Regulatory compliance and quality assurance sit at the heart of
@@ -84,7 +94,7 @@ export default function About() {
           {/* ── Right column: Vision + Mission cards, then core values ───── */}
           <ScrollReveal direction="right" duration={0.7} delay={0.1}>
             {/* Vision card */}
-            <div className="rounded-xl border border-border bg-white/60 p-6 shadow-sm backdrop-blur-sm">
+            <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <p className="micro-label mb-2">Our Vision</p>
               <p className="text-muted-foreground">
                 To be Africa&apos;s most trusted industrial supply partner —
@@ -95,7 +105,7 @@ export default function About() {
             </div>
 
             {/* Mission card */}
-            <div className="mt-4 rounded-xl border border-border bg-white/60 p-6 shadow-sm backdrop-blur-sm">
+            <div className="mt-4 rounded-xl border border-border bg-card p-6 shadow-sm">
               <p className="micro-label mb-2">Our Mission</p>
               <p className="text-muted-foreground">
                 To deliver reliable, compliant, and competitively priced
@@ -125,7 +135,7 @@ export default function About() {
                   >
                     <div
                       className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full
-                                 bg-primary/8 transition-colors duration-200 group-hover:bg-primary/14"
+                                 bg-primary/10 transition-colors duration-200 group-hover:bg-primary/20"
                     >
                       <Icon
                         size={15}
@@ -141,7 +151,6 @@ export default function About() {
               })}
             </ScrollReveal>
           </ScrollReveal>
-
         </div>
       </div>
     </section>

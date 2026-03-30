@@ -88,7 +88,7 @@ function DepartmentContent({ service }: { service: Service }) {
         {/* Key Products */}
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-primary">
               Key Products
             </h4>
             {/* Gold-line divider */}
@@ -111,7 +111,7 @@ function DepartmentContent({ service }: { service: Service }) {
           {service.elements && (
             <div className="mt-6">
               <div className="mb-3 flex items-center gap-3">
-                <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">
+                <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-primary">
                   Elements Measured
                 </h4>
                 <div className="h-px flex-1 bg-accent/50" />
@@ -147,7 +147,7 @@ export default function Departments() {
     <section
       id="departments"
       aria-label="Departments and specializations"
-      className="bg-background py-20 md:py-28"
+      className="bg-background section-light py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -171,7 +171,7 @@ export default function Departments() {
                 className={[
                   "rounded-lg px-5 py-2.5 font-display text-sm font-semibold transition-all duration-200",
                   isActive
-                    ? "bg-primary text-white shadow-md"
+                    ? "bg-primary text-primary-foreground shadow-md"
                     : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground",
                 ].join(" ")}
               >
