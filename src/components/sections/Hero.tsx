@@ -109,7 +109,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <img
-            src="/images/Mundala-icon-3.svg"
+            src="/images/mundala-icon-3.svg"
             alt=""
             className="w-full  opacity-10"
           />
