@@ -103,6 +103,18 @@ export default function Hero() {
           sizes="100vw"
         />
 
+        {/* Mundala logo — large centred watermark */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none"
+          aria-hidden="true"
+        >
+          <img
+            src="/images/Mundala-icon-3.svg"
+            alt=""
+            className="w-full  opacity-10"
+          />
+        </div>
+
         {/*
           Multi-stop gradient overlay:
           - Heavier at top so white nav links remain legible
