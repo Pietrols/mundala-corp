@@ -11,7 +11,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const HIGHLIGHTS = [
   "Exclusive African partnership with Baltic Scientific Instruments (BSI)",
   "BSI founded in 1994, built on decades of Soviet-era radiation research excellence dating to 1966",
-  "Real-time conveyor belt XRF analysis — instant ore grade data without slowing operations",
+  "Real-time conveyor belt XRF analysis - instant ore grade data without slowing operations",
   "Measures copper, cobalt, gold, iron, calcium, manganese, titanium, nickel, and more",
   "Already saving mines millions in operational costs across global deployments",
 ];
@@ -29,7 +29,6 @@ export default function BSIPartnership() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-
           {/* ── Left: content ──────────────────────────────────────────── */}
           <ScrollReveal direction="left" duration={0.7}>
             <p className="micro-label mb-3">Strategic Partnership</p>
@@ -41,10 +40,9 @@ export default function BSIPartnership() {
 
             <p className="mb-8 leading-relaxed text-muted-foreground">
               Through our exclusive partnership with Baltic Scientific
-              Instruments, Mundala brings the world&apos;s most advanced
-              on-line XRF mineral analysis technology to African mining
-              operations — delivering results that were previously impossible
-              in real time.
+              Instruments, Mundala brings the world&apos;s most advanced on-line
+              XRF mineral analysis technology to African mining operations -
+              delivering results that were previously impossible in real time.
             </p>
 
             {/* Highlights list */}
@@ -117,7 +115,6 @@ export default function BSIPartnership() {
               </div>
             </div>
           </ScrollReveal>
-
         </div>
       </div>
     </section>

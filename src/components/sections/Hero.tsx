@@ -94,14 +94,6 @@ export default function Hero() {
           Replace /images/hero-bg.webp with the real photo when available.
           Using `priority` because this is the LCP element.
         */}
-        <Image
-          src="/images/hero-bg.webp"
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
 
         {/* Mundala logo — large centred watermark */}
         <div

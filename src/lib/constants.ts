@@ -1,11 +1,11 @@
 // ============================================================
-// Company-wide constants — single source of truth for all data.
+// Company-wide constants - single source of truth for all data.
 // Update this file when contact details, offices, or services change.
 // ============================================================
 
-// ------------------------------------------------------------
+// -
 // Interfaces
-// ------------------------------------------------------------
+// -
 
 export interface CompanyInfo {
   name: string;
@@ -53,7 +53,7 @@ export interface NavLink {
   href: string;
 }
 
-/** Lucide icon name — extend this union as new icons are added */
+/** Lucide icon name - extend this union as new icons are added */
 export type LucideIconName =
   | "Shield"
   | "ShieldCheck"
@@ -83,10 +83,14 @@ export interface Service {
   title: string;
   icon: LucideIconName;
   description: string;
+  /** Longer paragraph shown in the detail modal */
+  detailedDescription: string;
   products: string[];
   industries: string[];
+  /** Short value proposition shown in the detail modal (Mining, Heavy Equipment, XRF) */
+  valueProp?: string;
   image: string;
-  /** Elements measurable by XRF — only present for the analytical equipment service */
+  /** Elements measurable by XRF - only present for the analytical equipment service */
   elements?: string[];
 }
 
@@ -97,9 +101,9 @@ export interface ValueProposition {
   description: string;
 }
 
-// ------------------------------------------------------------
+// -
 // Constants
-// ------------------------------------------------------------
+// -
 
 export const COMPANY_INFO = {
   name: "Mundala Corporation Limited",
@@ -194,6 +198,8 @@ export const SERVICES: Service[] = [
     icon: "Fuel",
     description:
       "Sale and distribution of motor and industrial fuels for power generation, manufacturing, mining, construction, transportation, and hospitality.",
+    detailedDescription:
+      "Mundala Corporation is a licensed petroleum distributor supplying motor and industrial fuels across Zambia. We source and deliver a full range of petroleum products - petrol, diesel, heavy fuel oil (HFO), and Jet A1 - to industrial operations, mining sites, power plants, construction projects, and hospitality businesses. Our supply chain is built on regulatory compliance: we hold all required Zambian Energy Regulation Board (ERB) licences and maintain strict quality standards on every litre we distribute. Whether you need bulk fuel supply contracts for a remote mining operation or reliable diesel delivery to a manufacturing plant, Mundala's logistics network ensures consistent, on-time delivery wherever you need it.",
     products: ["Petrol", "Diesel", "Heavy Fuel Oil (HFO)", "Jet A1"],
     industries: [
       "Power Generation",
@@ -211,6 +217,8 @@ export const SERVICES: Service[] = [
     icon: "Pickaxe",
     description:
       "Full range of mining consumables and equipment through an established supplier network with competitive pricing.",
+    detailedDescription:
+      "Mundala supplies a comprehensive range of mining consumables and specialist equipment sourced through a well-established global supplier network. Our mining division serves Zambia's Copperbelt and beyond, providing everything from process chemicals and reagents to capital equipment for CIL plants and solvent extraction circuits. We understand that mining operations run on tight margins - our deep supplier relationships allow us to offer competitive pricing without compromising on product quality or delivery timelines. From routine consumables like gaskets, pumps, and samplers to specialist reagents and metallurgical coal, we stock or can rapidly source the products that keep your operation running at full capacity.",
     products: [
       "Mining Solvents",
       "Mining Reagents",
@@ -222,6 +230,8 @@ export const SERVICES: Service[] = [
       "Samplers",
     ],
     industries: ["Mining", "Metallurgy", "Mineral Processing"],
+    valueProp:
+      "Competitive pricing through deep supplier relationships, with custom sourcing capability for specialist or hard-to-find requirements.",
     image: "/images/service-mining.webp",
   },
   {
@@ -230,6 +240,8 @@ export const SERVICES: Service[] = [
     icon: "Truck",
     description:
       "Supply of heavy machinery essential for mining operations with comprehensive aftersales support.",
+    detailedDescription:
+      "Mundala's heavy equipment division provides mining companies and construction contractors with top-specification machinery sourced from leading global manufacturers. Our range includes articulated dump trucks, front-end loaders, drilling rigs, and a growing selection of electric vehicles for both surface and underground operations. As the industry moves toward zero-emission underground mining, we supply next-generation EV underground loaders and dump trucks designed for Zambia's deep copper mines. Every equipment sale is backed by comprehensive aftersales support - technical training for operators and maintenance teams, spare parts supply, and flexible service agreements structured to maximise uptime and protect your capital investment.",
     products: [
       "Articulated Dump Trucks",
       "Loaders",
@@ -239,6 +251,8 @@ export const SERVICES: Service[] = [
       "EV Underground Dump Trucks",
     ],
     industries: ["Mining", "Construction", "Infrastructure"],
+    valueProp:
+      "Top-brand partnerships combined with comprehensive aftersales support - training, spare parts supply, and service agreements to maximise equipment uptime.",
     image: "/images/service-equipment.webp",
   },
   {
@@ -247,8 +261,12 @@ export const SERVICES: Service[] = [
     icon: "Microscope",
     description:
       "Exclusive BSI partnership delivering cutting-edge XRF mineral analysis for real-time ore grade assessment across Africa.",
+    detailedDescription:
+      "As the exclusive African partner for Baltic Scientific Instruments (BSI), Mundala brings the world's most advanced on-line XRF mineral analysis technology to African mining operations. BSI's conveyor belt XRF analysers deliver continuous, real-time ore grade data without stopping the belt or requiring laboratory sampling - enabling mine operators to make instant, data-driven decisions about ore routing, blending, and reagent dosing. Founded in 1994 and rooted in decades of Soviet-era radiation science research dating to 1966, BSI's instruments are engineered for the harsh conditions of industrial mining environments. Their technology is already deployed across global mining operations, saving millions in operational costs by eliminating misrouted ore, reducing reagent overconsumption, and optimising plant throughput.",
     products: ["On-line XRF analyzers for conveyor belt mineral analysis"],
     industries: ["Mining", "Mineral Processing", "Quality Control"],
+    valueProp:
+      "Real-time ore grade assessment - continuous, non-contact, and faster than any laboratory method, directly reducing operational costs and improving recovery rates.",
     elements: [
       "Copper",
       "Cobalt",
@@ -292,7 +310,7 @@ export const WHY_CHOOSE_US: ValueProposition[] = [
     icon: "Clock",
     title: "Reliable Delivery",
     description:
-      "Timely delivery is a core commitment — your operations should never wait on us.",
+      "Timely delivery is a core commitment - your operations should never wait on us.",
   },
   {
     id: "custom",

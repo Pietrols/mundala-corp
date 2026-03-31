@@ -67,7 +67,7 @@ export default function About() {
                 with a clear mission: to be the most reliable industrial supply
                 partner for Zambia&apos;s growing economy. From our offices in
                 Lusaka and Kitwe, we serve the mining, petroleum, and analytical
-                equipment sectors — industries that form the backbone of
+                equipment sectors - industries that form the backbone of
                 regional development.
               </p>
               <p>
@@ -76,7 +76,7 @@ export default function About() {
                 XRF mineral analytical equipment. As the exclusive African
                 partner for Baltic Scientific Instruments (BSI), we bring
                 world-class technology to the continent&apos;s mining operations
-                — enabling real-time ore grade assessment that saves millions in
+                - enabling real-time ore grade assessment that saves millions in
                 operational costs.
               </p>
               <p>
@@ -97,7 +97,7 @@ export default function About() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <p className="micro-label mb-2">Our Vision</p>
               <p className="text-muted-foreground">
-                To be Africa&apos;s most trusted industrial supply partner —
+                To be Africa&apos;s most trusted industrial supply partner -
                 connecting Zambia&apos;s industries with world-class products
                 and technology that drive sustainable growth across the
                 continent.
@@ -110,12 +110,12 @@ export default function About() {
               <p className="text-muted-foreground">
                 To deliver reliable, compliant, and competitively priced
                 industrial solutions that empower Zambia&apos;s mining,
-                petroleum, and manufacturing sectors — backed by integrity,
+                petroleum, and manufacturing sectors - backed by integrity,
                 expert knowledge, and a genuine commitment to client success.
               </p>
             </div>
 
-            {/* Core values — 2-column icon + label grid */}
+            {/* Core values - 2-column icon + label grid */}
             <ScrollReveal
               stagger
               staggerDelay={0.08}

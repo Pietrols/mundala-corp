@@ -10,7 +10,9 @@ import {
   Headphones,
   type LucideIcon,
 } from "lucide-react";
-import ScrollReveal, { staggerChildVariants } from "@/components/ui/ScrollReveal";
+import ScrollReveal, {
+  staggerChildVariants,
+} from "@/components/ui/ScrollReveal";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Data
@@ -48,7 +50,7 @@ const PROPOSITIONS: {
     Icon: Clock,
     title: "Reliable Delivery",
     description:
-      "Timely delivery is a core commitment — your operations should never be held up waiting on us.",
+      "Timely delivery is a core commitment - your operations should never be held up waiting on us.",
   },
   {
     id: "custom",
@@ -78,7 +80,6 @@ export default function WhyChooseUs() {
       className="bg-background section-light py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* ── Header ─────────────────────────────────────────────────────── */}
         <ScrollReveal className="mb-12 text-center md:mb-16">
           <p className="micro-label mb-3">Why Mundala</p>
@@ -127,7 +128,6 @@ export default function WhyChooseUs() {
             </motion.div>
           ))}
         </ScrollReveal>
-
       </div>
     </section>
   );

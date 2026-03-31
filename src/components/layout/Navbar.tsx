@@ -95,7 +95,7 @@ export default function Navbar() {
                 e.preventDefault();
                 scrollTo("#home");
               }}
-              aria-label="Mundala Corporation — back to top"
+              aria-label="Mundala Corporation - back to top"
               className="select-none"
             >
               <span
@@ -170,7 +170,7 @@ export default function Navbar() {
 
       {/* ── Mobile drawer ─────────────────────────────────────── */}
       {/*
-        Rendered as a sibling to <header> — not a child — so it
+        Rendered as a sibling to <header> - not a child - so it
         participates in the root stacking context and isn't clipped
         by the header's own stacking context.
       */}
@@ -237,7 +237,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Links — stagger in from the right */}
+              {/* Links - stagger in from the right */}
               <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
                 {NAV_LINKS.map((link, i) => (
                   <motion.a
