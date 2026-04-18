@@ -1,4 +1,4 @@
-# Mundala Corporation Limited — Corporate Website
+# Mundala Corporation Limited - Corporate Website
 
 A professional, SEO-optimized corporate landing page for Mundala Corporation Limited, a Zambian industrial supply company operating across petroleum products, mining supplies, heavy equipment, and mineral analytical equipment.
 
@@ -31,13 +31,13 @@ Mundala Corporation Limited was established in September 2021 and serves the min
 ## Features
 
 - **Dark-first design** with deep navy primary (`#34408A`) and white accents
-- **Responsive layout** — mobile-first, tested across breakpoints
+- **Responsive layout** - mobile-first, tested across breakpoints
 - **Scroll-triggered animations** via Framer Motion with `whileInView`
-- **Frosted glass navbar** — transparent over hero, frosted dark glass on scroll
+- **Frosted glass navbar** - transparent over hero, frosted dark glass on scroll
 - **Tabbed departments section** with animated content transitions
-- **SEO optimized** — semantic HTML, JSON-LD structured data, OpenGraph tags, auto-generated sitemap
-- **Accessible** — proper heading hierarchy, `aria-labels`, keyboard navigation, `prefers-reduced-motion` support
-- **Performance focused** — `next/image` optimization, font `display: swap`, static generation
+- **SEO optimized** - semantic HTML, JSON-LD structured data, OpenGraph tags, auto-generated sitemap
+- **Accessible** - proper heading hierarchy, `aria-labels`, keyboard navigation, `prefers-reduced-motion` support
+- **Performance focused** - `next/image` optimization, font `display: swap`, static generation
 
 ---
 
@@ -64,15 +64,15 @@ mundala-corp/
 │   └── images/            # Company logos, service photos, hero background
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx     # Root layout — fonts, metadata, global providers
-│   │   ├── page.tsx       # Landing page — assembles all sections
+│   │   ├── layout.tsx     # Root layout - fonts, metadata, global providers
+│   │   ├── page.tsx       # Landing page - assembles all sections
 │   │   ├── globals.css    # Tailwind directives + design token CSS variables
 │   │   ├── sitemap.ts     # Auto-generated sitemap
 │   │   └── not-found.tsx  # Custom 404
 │   ├── components/
 │   │   ├── layout/        # Navbar, Footer
 │   │   ├── sections/      # Hero, About, Services, Departments, etc.
-│   │   └── ui/            # Reusable components — ScrollReveal, buttons
+│   │   └── ui/            # Reusable components - ScrollReveal, buttons
 │   ├── lib/
 │   │   ├── constants.ts   # All company data, service definitions, contact info
 │   │   └── metadata.ts    # SEO metadata generator
@@ -137,17 +137,17 @@ npx vercel --prod
 
 The visual identity is defined in two reference documents:
 
-- **`MUNDALA_DESIGN.md`** — Full design specification: color tokens, typography, spacing, component specs, animation patterns, SEO requirements, and build order
-- **`STYLE_DIRECTIVE.md`** — Restyling guide for the dark-first navy + white accent aesthetic
+- **`MUNDALA_DESIGN.md`** - Full design specification: color tokens, typography, spacing, component specs, animation patterns, SEO requirements, and build order
+- **`STYLE_DIRECTIVE.md`** - Restyling guide for the dark-first navy + white accent aesthetic
 
 ### Design Tokens (Quick Reference)
 
 | Token              | Value                          |
 | ------------------ | ------------------------------ |
-| Primary            | `#34408A` — deep indigo-navy   |
-| Background (dark)  | `hsl(220 18% 8%)` — `#121620`  |
-| Background (light) | `hsl(220 20% 97%)` — `#F5F6FA` |
-| Foreground         | `hsl(220 20% 95%)` — `#F0F2F7` |
+| Primary            | `#34408A` - deep indigo-navy   |
+| Background (dark)  | `hsl(220 18% 8%)` - `#121620`  |
+| Background (light) | `hsl(220 20% 97%)` - `#F5F6FA` |
+| Foreground         | `hsl(220 20% 95%)` - `#F0F2F7` |
 | Font display       | Montserrat 400–800             |
 | Font body          | DM Sans 400–700                |
 | Radius             | `0.75rem`                      |
