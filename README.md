@@ -2,7 +2,7 @@
 
 A professional, SEO-optimized corporate landing page for Mundala Corporation Limited, a Zambian industrial supply company operating across petroleum products, mining supplies, heavy equipment, and mineral analytical equipment.
 
-**Live Site → [mundala-corp.vercel.app](https://mundala-corp.vercel.app)**
+**Live Site - [mundala-corp.vercel.app](https://mundala-corp.vercel.app)**
 
 ---
 
