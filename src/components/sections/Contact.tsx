@@ -16,7 +16,11 @@ function OfficeCard({ office }: { office: (typeof OFFICES)[number] }) {
       </h3>
       <ul className="space-y-3">
         <li className="flex items-start gap-3">
-          <MapPin size={16} className="mt-0.5 shrink-0 text-accent" strokeWidth={1.75} />
+          <MapPin
+            size={16}
+            className="mt-0.5 shrink-0 text-accent"
+            strokeWidth={1.75}
+          />
           <span className="text-sm leading-relaxed text-white/70">
             {office.address[0]}
             <br />
@@ -24,7 +28,11 @@ function OfficeCard({ office }: { office: (typeof OFFICES)[number] }) {
           </span>
         </li>
         <li className="flex items-center gap-3">
-          <Phone size={16} className="shrink-0 text-accent" strokeWidth={1.75} />
+          <Phone
+            size={16}
+            className="shrink-0 text-accent"
+            strokeWidth={1.75}
+          />
           <span className="text-sm text-white/70">
             {CONTACT.phones[0]} &nbsp;·&nbsp; {CONTACT.phones[1]}
           </span>
@@ -61,7 +69,6 @@ export default function Contact() {
       className="bg-[hsl(220_25%_10%)] py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
         {/* ── Header ─────────────────────────────────────────────────────── */}
         <ScrollReveal className="mb-12 text-center md:mb-16">
           <p className="micro-label mb-3">Get In Touch</p>
@@ -71,7 +78,6 @@ export default function Contact() {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14">
-
           {/* ── Left: office cards ─────────────────────────────────────── */}
           <ScrollReveal direction="left" duration={0.7}>
             <p className="mb-5 text-sm font-medium uppercase tracking-wider text-white/50">
@@ -87,13 +93,16 @@ export default function Contact() {
           {/* ── Right: contact form ───────────────────────────────────── */}
           <ScrollReveal direction="right" duration={0.7} delay={0.1}>
             <form
-              action="https://formspree.io/f/placeholder"
+              action="https://formspree.io/f/xpqnbozj"
               method="POST"
               className="space-y-4"
             >
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-white/60">
+                  <label
+                    htmlFor="name"
+                    className="mb-1.5 block text-xs font-medium text-white/60"
+                  >
                     Full Name <span className="text-accent">*</span>
                   </label>
                   <input
@@ -106,7 +115,10 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-white/60">
+                  <label
+                    htmlFor="email"
+                    className="mb-1.5 block text-xs font-medium text-white/60"
+                  >
                     Email Address <span className="text-accent">*</span>
                   </label>
                   <input
@@ -121,7 +133,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="company" className="mb-1.5 block text-xs font-medium text-white/60">
+                <label
+                  htmlFor="company"
+                  className="mb-1.5 block text-xs font-medium text-white/60"
+                >
                   Company
                 </label>
                 <input
@@ -134,7 +149,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="mb-1.5 block text-xs font-medium text-white/60">
+                <label
+                  htmlFor="subject"
+                  className="mb-1.5 block text-xs font-medium text-white/60"
+                >
                   Subject <span className="text-accent">*</span>
                 </label>
                 <select
@@ -144,19 +162,39 @@ export default function Contact() {
                   defaultValue=""
                   className={inputCls + " cursor-pointer"}
                 >
-                  <option value="" disabled className="bg-slate-900 text-white/40">
+                  <option
+                    value=""
+                    disabled
+                    className="bg-slate-900 text-white/40"
+                  >
                     Select a topic…
                   </option>
-                  <option value="petroleum" className="bg-slate-900 text-white">Petroleum Products</option>
-                  <option value="mining" className="bg-slate-900 text-white">Mining Products</option>
-                  <option value="heavy-equipment" className="bg-slate-900 text-white">Heavy Equipment</option>
-                  <option value="xrf" className="bg-slate-900 text-white">XRF / BSI Partnership</option>
-                  <option value="general" className="bg-slate-900 text-white">General Enquiry</option>
+                  <option value="petroleum" className="bg-slate-900 text-white">
+                    Petroleum Products
+                  </option>
+                  <option value="mining" className="bg-slate-900 text-white">
+                    Mining Products
+                  </option>
+                  <option
+                    value="heavy-equipment"
+                    className="bg-slate-900 text-white"
+                  >
+                    Heavy Equipment
+                  </option>
+                  <option value="xrf" className="bg-slate-900 text-white">
+                    XRF / BSI Partnership
+                  </option>
+                  <option value="general" className="bg-slate-900 text-white">
+                    General Enquiry
+                  </option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-white/60">
+                <label
+                  htmlFor="message"
+                  className="mb-1.5 block text-xs font-medium text-white/60"
+                >
                   Message <span className="text-accent">*</span>
                 </label>
                 <textarea
@@ -180,7 +218,6 @@ export default function Contact() {
               </button>
             </form>
           </ScrollReveal>
-
         </div>
       </div>
     </section>
