@@ -15,7 +15,7 @@ export default function Navbar() {
   // ── Scroll listener ─────────────────────────────────────────
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
-    onScroll(); // set initial state without waiting for a scroll event
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -40,7 +40,6 @@ export default function Navbar() {
   // ── Focus management ─────────────────────────────────────────
   useEffect(() => {
     if (mobileOpen) {
-      // Small delay lets the animation start before we steal focus
       const id = setTimeout(() => closeButtonRef.current?.focus(), 50);
       return () => clearTimeout(id);
     } else {
@@ -132,6 +131,20 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
+              {/* BSI external link */}
+              <li>
+                <a
+                  href="https://bsi.lv/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={[
+                    "font-display font-medium text-sm transition-colors duration-150",
+                    linkClass,
+                  ].join(" ")}
+                >
+                  BSI
+                </a>
+              </li>
             </ul>
 
             {/* Right side ─────────────────────────────────── */}
@@ -169,11 +182,6 @@ export default function Navbar() {
       </header>
 
       {/* ── Mobile drawer ─────────────────────────────────────── */}
-      {/*
-        Rendered as a sibling to <header> - not a child - so it
-        participates in the root stacking context and isn't clipped
-        by the header's own stacking context.
-      */}
       <AnimatePresence>
         {mobileOpen && (
           <>
@@ -237,7 +245,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Links - stagger in from the right */}
+              {/* Links */}
               <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
                 {NAV_LINKS.map((link, i) => (
                   <motion.a
@@ -259,6 +267,23 @@ export default function Navbar() {
                     {link.label}
                   </motion.a>
                 ))}
+
+                {/* BSI external link - mobile */}
+                <motion.a
+                  href="https://bsi.lv/en/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: 24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: 0.05 + NAV_LINKS.length * 0.055,
+                    duration: 0.22,
+                    ease: "easeOut",
+                  }}
+                  className="flex items-center rounded-lg px-4 py-3.5 font-display font-medium text-foreground transition-colors duration-150 hover:bg-muted hover:text-foreground"
+                >
+                  BSI
+                </motion.a>
               </nav>
 
               {/* CTA */}

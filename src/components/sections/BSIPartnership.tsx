@@ -61,22 +61,36 @@ export default function BSIPartnership() {
               ))}
             </ul>
 
-            {/* CTA */}
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-display
-                         font-semibold text-primary-foreground shadow-md transition-all duration-200
-                         hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)]
-                         active:translate-y-0 active:shadow-md"
-            >
-              Request Information
-            </a>
+            {/* CTAs */}
+            <div className="flex items-center gap-4 flex-wrap">
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center rounded-lg bg-primary px-6 py-3 font-display
+                           font-semibold text-primary-foreground shadow-md transition-all duration-200
+                           hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-[0_8px_30px_hsl(232_45%_37%/0.35)]
+                           active:translate-y-0 active:shadow-md"
+              >
+                Request Information
+              </a>
+
+              <a
+                href="https://bsi.lv/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg border border-white/20 px-6 py-3 font-display
+                           font-semibold text-white/80 transition-all duration-200
+                           hover:border-white/40 hover:text-white hover:-translate-y-0.5
+                           active:translate-y-0"
+              >
+                Visit BSI →
+              </a>
+            </div>
           </ScrollReveal>
 
           {/* ── Right: XRF image ───────────────────────────────────────── */}
