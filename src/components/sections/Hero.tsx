@@ -164,7 +164,7 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
             className="mx-auto mb-10 max-w-2xl leading-relaxed text-white/75
-                       text-base sm:text-lg"
+                       text-base sm:text-lg text-justify"
           >
             {COMPANY_INFO.description}
           </motion.p>

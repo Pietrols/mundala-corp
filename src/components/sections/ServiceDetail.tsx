@@ -168,7 +168,7 @@ export default function ServiceDetailModal({
                 </div>
 
                 {/* Detailed description */}
-                <p className="mb-8 leading-relaxed text-muted-foreground">
+                <p className="mb-8 leading-relaxed text-muted-foreground text-justify">
                   {service.detailedDescription}
                 </p>
 
@@ -244,7 +244,7 @@ export default function ServiceDetailModal({
                 {/* Value proposition */}
                 {service.valueProp && (
                   <div className="mb-6 rounded-xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm leading-relaxed text-white/70">
+                    <p className="text-sm leading-relaxed text-white/70 text-justify">
                       <span className="font-semibold text-white">
                         Why Mundala:{" "}
                       </span>

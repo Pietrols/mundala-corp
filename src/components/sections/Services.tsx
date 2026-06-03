@@ -120,7 +120,7 @@ export default function Services() {
                       </div>
 
                       {/* Description */}
-                      <p className="line-clamp-2 text-sm leading-relaxed text-slate-400">
+                      <p className="line-clamp-2 text-sm leading-relaxed text-slate-400 text-justify">
                         {service.description}
                       </p>
 

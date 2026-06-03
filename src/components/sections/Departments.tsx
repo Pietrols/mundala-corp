@@ -81,7 +81,7 @@ function DepartmentContent({ service }: { service: Service }) {
         </div>
 
         {/* Description */}
-        <p className="mb-7 leading-relaxed text-muted-foreground">
+        <p className="mb-7 leading-relaxed text-muted-foreground text-justify">
           {service.description}
         </p>
 

@@ -122,7 +122,7 @@ export default function WhyChooseUs() {
               </h3>
 
               {/* Description */}
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="text-sm leading-relaxed text-muted-foreground text-justify">
                 {description}
               </p>
             </motion.div>

@@ -38,7 +38,7 @@ export default function BSIPartnership() {
               <span className="text-white">in Africa</span>
             </h2>
 
-            <p className="mb-8 leading-relaxed text-muted-foreground">
+            <p className="mb-8 leading-relaxed text-muted-foreground text-justify">
               Through our exclusive partnership with Baltic Scientific
               Instruments, Mundala brings the world&apos;s most advanced on-line
               XRF mineral analysis technology to African mining operations -
@@ -54,7 +54,7 @@ export default function BSIPartnership() {
                     className="mt-0.5 shrink-0 text-accent"
                     strokeWidth={2}
                   />
-                  <span className="text-sm leading-relaxed text-foreground">
+                  <span className="text-sm leading-relaxed text-foreground text-justify">
                     {item}
                   </span>
                 </li>

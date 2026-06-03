@@ -30,7 +30,7 @@ export default function Footer() {
                 {" "}Corp
               </span>
             </a>
-            <p className="mb-5 text-sm leading-relaxed text-white/50">
+            <p className="mb-5 text-sm leading-relaxed text-white/50 text-justify">
               {COMPANY_INFO.description}
             </p>
             {/* Social placeholder icons */}

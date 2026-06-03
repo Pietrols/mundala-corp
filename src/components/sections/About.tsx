@@ -62,7 +62,7 @@ export default function About() {
             </h2>
 
             <div className="space-y-4 text-muted-foreground">
-              <p>
+              <p className="text-justify">
                 Mundala Corporation Limited was established in September 2021
                 with a clear mission: to be the most reliable industrial supply
                 partner for Zambia&apos;s growing economy. From our offices in
@@ -70,7 +70,7 @@ export default function About() {
                 equipment sectors - industries that form the backbone of
                 regional development.
               </p>
-              <p>
+              <p className="text-justify">
                 We supply a comprehensive range of products, from petroleum
                 fuels and mining consumables to heavy machinery and cutting-edge
                 XRF mineral analytical equipment. As the exclusive African
@@ -79,7 +79,7 @@ export default function About() {
                 - enabling real-time ore grade assessment that saves millions in
                 operational costs.
               </p>
-              <p>
+              <p className="text-justify">
                 Regulatory compliance and quality assurance sit at the heart of
                 everything we do. Fully licensed across all Zambian regulatory
                 bodies, we uphold strict standards on every product we supply.
@@ -96,7 +96,7 @@ export default function About() {
             {/* Vision card */}
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
               <p className="micro-label mb-2">Our Vision</p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-justify">
                 To be Africa&apos;s most trusted industrial supply partner -
                 connecting Zambia&apos;s industries with world-class products
                 and technology that drive sustainable growth across the
@@ -107,7 +107,7 @@ export default function About() {
             {/* Mission card */}
             <div className="mt-4 rounded-xl border border-border bg-card p-6 shadow-sm">
               <p className="micro-label mb-2">Our Mission</p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-justify">
                 To deliver reliable, compliant, and competitively priced
                 industrial solutions that empower Zambia&apos;s mining,
                 petroleum, and manufacturing sectors - backed by integrity,
