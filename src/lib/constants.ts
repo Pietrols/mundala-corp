@@ -117,7 +117,7 @@ export const COMPANY_INFO = {
 } satisfies CompanyInfo;
 
 export const CONTACT = {
-  email: "mundalacorp@yahoo.com",
+  email: "info@mundalacorp.com",
   phones: ["+260 968 875 851", "+260 965 772 181"],
   social: {
     linkedin: "",
