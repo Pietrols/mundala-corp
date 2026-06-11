@@ -30,7 +30,7 @@ export const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+260968875851",
-    email: "mundalacorp@yahoo.com",
+    email: "info@mundalacorp.com",
     contactType: "sales",
   },
   sameAs: [],
@@ -55,6 +55,9 @@ export function generateMetadata(overrides?: Partial<Metadata>): Metadata {
     icons: {
       icon: "/favicon.svg",
       apple: "/favicon.svg",
+    },
+    verification: {
+      google: "8nzGbiiE15DIQpMCRYGQRMOCJTdmXzDLWeW3LFiiPB4",
     },
     openGraph: {
       type: "website",
