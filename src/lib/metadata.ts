@@ -39,6 +39,7 @@ export const organizationJsonLd = {
 /** Generate page-level metadata with optional overrides */
 export function generateMetadata(overrides?: Partial<Metadata>): Metadata {
   const defaults: Metadata = {
+    metadataBase: new URL(baseUrl),
     title: `${COMPANY_INFO.name} | Industrial Supply & Mining Solutions in Zambia`,
     description:
       "Trusted Zambian supplier of petroleum products, mining equipment, heavy machinery, and XRF mineral analytical solutions. Exclusive BSI partner for Africa. Offices in Lusaka and Kitwe.",
