@@ -39,7 +39,7 @@ export default function XrfDemoVideo() {
         {/* ── Video facade — 16:9 locked, self-caps at 720px, centered ────── */}
         <div className="[&_lite-youtube]:mx-auto">
           <YouTubeEmbed
-            videoid="xu5C3WCcZaM"
+            videoid="8Ve_JgKcJi4"
             params="rel=0"
             playlabel="Play: XRF analyzers on the conveyor line"
           />
